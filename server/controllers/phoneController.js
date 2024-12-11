@@ -53,7 +53,7 @@ exports.getPhones = async (req, res) => {
   res.status(200).json(result);
 };
 exports.getPhonesDetailsByURL = async (req, res) => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try {
     let properties = [];
