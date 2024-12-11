@@ -159,14 +159,15 @@ function Phonepage() {
           <h1 className="phonepage-name">
             {phoneData?.name} {verified ? "✅" : ""}
           </h1>
-          {receivedData &&
+          <div className="phonepage-details-text-div">{receivedData &&
             !editData &&
             receivedData.properties.map((element, index) => (
               <h2
                 className="phonepage-details-text"
                 key={index}
-              >{`${element.category} : ${element.value}`}</h2>
-            ))}
+              ><span className="phonepage-category-text">{element.category + " :"}</span><span  className="phonepage-value-text">{element.value}</span></h2>
+            ))}</div>
+          
           {receivedData && !editData && (
             <RadarChart captions={captions} data={data} size={450} />
           )}

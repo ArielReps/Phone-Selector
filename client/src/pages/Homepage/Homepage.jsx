@@ -26,6 +26,7 @@ function Homepage() {
       <Typography
               style={{
                 color: "white",
+                fontWeight: 500
               }}
               variant="h2">
               Phone selector
@@ -33,6 +34,7 @@ function Homepage() {
             <Typography
               style={{
                 color: "white",
+                fontWeight: 300
               }}
               variant="h4">
               Search below for the phone you seek to review

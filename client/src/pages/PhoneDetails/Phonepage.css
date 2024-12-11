@@ -74,6 +74,19 @@
     display: flex;
     justify-content: space-around;
 }
+.phonepage-details-text-div
+{
+  padding: 10px 0 25px 0;
+}
+.phonepage-category-text
+{
+  font-weight: 600;
+}
+.phonepage-value-text
+{
+  color: rgb(0, 16, 0);
+  font-weight: 400;
+}
 @keyframes slideInFromLeft {
     0% {
       transform: translateX(-100%);
