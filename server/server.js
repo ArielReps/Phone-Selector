@@ -1,0 +1,19 @@
+const bodyParser = require("body-parser");
+const app = require("./app");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+dotenv.config({ path: "./.env" });
+console.log(process.env.SALT)
+const port = process.env.PORT||8000;
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+mongoose
+  .connect(process.env.MONGOURI)
+  .then(console.log("data base is connected"))
+  .catch((erorr) => {
+    console.log(erorr);
+  });
+app.listen(port, () => {
+  console.log(`server runs on port ${port}`);
+});
